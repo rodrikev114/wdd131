@@ -1,56 +1,59 @@
+/* Set the default font and size */
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Times New Roman", serif;
   font-size: 20px;
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  text-align: center;
+  background-color: white;
 }
- 
- 
-main {
+
+/* Center and size the content box */
+.content {
   max-width: 600px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  text-align: left;
+  margin: 40px auto;
+  padding: 30px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
- 
- 
-header h1 {
-  font-size: 1.8rem;
-  letter-spacing: 3px;
+
+/* Header section */
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.title h1 {
   text-transform: uppercase;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
- 
- 
-header h2 {
-  font-size: 0.9rem;
-  color: #006EB6;
+
+.title h2 {
+  color: #006eb6;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin: 0;
-  padding-bottom: 1rem;
+  font-size: 16px;
+  margin-top: 0;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
 }
- 
- 
-p {
-  margin: 1rem 0;
+
+/* Main content */
+main p {
+  text-align: left;
+  margin-bottom: 20px;
 }
- 
- 
-ol {
-  margin-top: 1rem;
-  padding-left: 1.2rem;
+
+.does-list {
+  padding-left: 20px;
+  text-align: left;
 }
- 
-footer .logo {
-  font-size: 1.8rem;
-  color: #006EB6;
-  font-weight: bold;
-  line-height: 1.2;
-  margin-top: 3rem;
-  display: inline-block;
+
+/* Footer logo */
+.logo {
+  display: block;
+  margin: 30px auto 0;
   width: 150px;
 }
