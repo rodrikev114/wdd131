@@ -57,3 +57,23 @@ main p {
   margin: 30px auto 0;
   width: 150px;
 }
+
+/* DARK THEME */
+.dark {
+  background-color: #333;
+  color: white;
+}
+
+.dark h2 {
+  color: #88c3f7; /* A lighter blue for better contrast */
+}
+
+.dark .content {
+  border-color: #888;
+}
+
+.dark select {
+  background-color: #444;
+  color: white;
+  border: 1px solid #aaa;
+}
