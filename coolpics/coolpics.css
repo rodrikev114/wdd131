@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+/* ---------- CSS Variables ---------- */
+:root {
+  --primary-color: #52489c;
+  --secondary-color: #59c3c3;
+  --accent-color: #f45b69;
+  --text-dark: #333;
+  --text-light: #ebebeb;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: 'Mooli', sans-serif;
+}
+
+/* ---------- Global Styles ---------- */
+body {
+  font-family: var(--primary-font);
+  font-size: 1.2em;
+  color: var(--text-dark);
+  margin: 0;
+  background-color: var(--text-light);
+}
+
+h1, h2 {
+  font-family: var(--secondary-font);
+  text-align: center; /* Centers both titles */
+}
+
+a:link,
+a:visited {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* ---------- Header & Footer ---------- */
+header,
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+/* ---------- Navigation ---------- */
+#menu {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0.5em 0;
+}
+
+/* ---------- Main Content ---------- */
+main {
+  text-align: center;
+}
+
+main h2 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* ---------- Gallery ---------- */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  justify-items: center;
+  padding: 1em;
+}
+
+/* ---------- Media Queries ---------- */
+
+/* 700px breakpoint – 2 columns */
+@media screen and (min-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* 1000px breakpoint – 3 columns + horizontal nav */
+@media screen and (min-width: 1000px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
