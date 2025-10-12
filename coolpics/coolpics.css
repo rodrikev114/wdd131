@@ -22,7 +22,7 @@ body {
 
 h1, h2 {
   font-family: var(--secondary-font);
-  text-align: center; /* Centers both titles */
+  text-align: center;
 }
 
 a:link,
@@ -57,7 +57,7 @@ header h1 {
 }
 
 footer p {
-  margin: 0;
+  margin: 0.5em 0;
   font-size: 0.9em;
 }
 
@@ -81,6 +81,10 @@ nav li {
   margin: 0.5em 0;
 }
 
+.hide {
+  display: none;
+}
+
 /* ---------- Main Content ---------- */
 main {
   text-align: center;
@@ -89,6 +93,7 @@ main {
 main h2 {
   margin-top: 1em;
   margin-bottom: 1em;
+  text-align: center;
 }
 
 /* ---------- Gallery ---------- */
@@ -96,20 +101,18 @@ main h2 {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1em;
+  justify-content: center;
   justify-items: center;
   padding: 1em;
 }
 
 /* ---------- Media Queries ---------- */
-
-/* 700px breakpoint – 2 columns */
 @media screen and (min-width: 700px) {
   .gallery {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-/* 1000px breakpoint – 3 columns + horizontal nav */
 @media screen and (min-width: 1000px) {
   header {
     display: flex;
@@ -130,4 +133,37 @@ main h2 {
   .gallery {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+/* ---------- Modal Styles ---------- */
+dialog {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+dialog img {
+  display: block;
+  max-height: 100%;
+  width: 100%;
+  object-fit: contain;
+  margin: 20vh auto;
+}
+
+.close-viewer {
+  position: absolute;
+  top: 20vh;
+  right: 34vh;
+  font-size: 1em;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0.3em 0.6em;
+  z-index: 10;
 }
