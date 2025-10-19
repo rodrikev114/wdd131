@@ -18,6 +18,22 @@ body{
 }
 
 /* Helpers (a11y) */
+.skiptocontent a {
+  position: absolute;
+  top: -40px;              /* slide it off-screen */
+  left: 1rem;
+  background: #fff;
+  color: var(--dark);
+  border: 2px solid var(--red);
+  padding: .5rem .75rem;
+  text-decoration: none;
+  z-index: 1000;
+}
+.skiptocontent a:focus,
+.skiptocontent a:focus-visible {
+  top: 0;                  /* reveal it when focused */
+}
+
 .visually-hidden{
   position:absolute !important;
   height:1px; width:1px;
