@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <!-- Example based off of https://www.w3docs.com/learn-html/html-form-templates.html -->
   <head>
+    <meta charset="utf-8" />
     <title>Camp Registration</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"/>
     <link rel="stylesheet" href="register.css" />
   </head>
   <body>
     <div class="testbox">
       <h1>Camp Registration</h1>
-      <form> id="registerForm">
+
+      <form id="registerForm">
         <fieldset class="participants">
           <legend>Participant Information</legend>
+
           <section class="participant1">
             <p>Participant 1</p>
+
             <div class="item">
-              <label for="fname"> First Name<span>*</span></label>
-              <input id="fname" type="text" name="fname" value="" required />
+              <label for="fname1"> First Name<span>*</span></label>
+              <input id="fname1" type="text" name="fname1" required />
             </div>
+
             <div class="item activities">
-              <label for="activity">Activity #<span>*</span></label>
-              <input id="activity" type="text" name="activity" />
+              <label for="activity1">Activity #<span>*</span></label>
+              <input id="activity1" type="text" name="activity1" />
             </div>
+
             <div class="item">
-              <label for="fee">Fee ($)<span>*</span></label>
-              <input id="fee" type="number" name="fee" />
+              <label for="fee1">Fee ($)<span>*</span></label>
+              <input id="fee1" type="number" name="fee1" min="0" step="0.01" />
             </div>
+
             <div class="item">
-              <label for="date">Desired Date <span>*</span></label>
-              <input id="date" type="date" name="date" />
+              <label for="date1">Desired Date <span>*</span></label>
+              <input id="date1" type="date" name="date1" />
             </div>
+
             <div class="item">
               <p>Grade</p>
-              <select>
-                <option selected value="" disabled selected></option>
+              <select id="grade1" name="grade1">
+                <option value="" disabled selected></option>
                 <option value="1">1st</option>
                 <option value="2">2nd</option>
                 <option value="3">3rd</option>
@@ -52,6 +56,7 @@
               </select>
             </div>
           </section>
+
           <button type="button" id="add">Add Participant</button>
         </fieldset>
 
@@ -93,50 +98,23 @@
               <label>Relationship to Participants:</label>
               <div class="question-answer">
                 <div>
-                  <input
-                    type="radio"
-                    value="self"
-                    id="radio_3"
-                    name="relationship"
-                  />
+                  <input type="radio" value="self" id="radio_3" name="relationship"/>
                   <label for="radio_3" class="radio"><span>Self</span></label>
                 </div>
                 <div>
-                  <input
-                    type="radio"
-                    value="mother"
-                    id="radio_4"
-                    name="relationship"
-                  />
+                  <input type="radio" value="mother" id="radio_4" name="relationship"/>
                   <label for="radio_4" class="radio"><span>Mother</span></label>
                 </div>
                 <div>
-                  <input
-                    type="radio"
-                    value="father"
-                    id="radio_5"
-                    name="relationship"
-                  />
+                  <input type="radio" value="father" id="radio_5" name="relationship"/>
                   <label for="radio_5" class="radio"><span>Father</span></label>
                 </div>
                 <div>
-                  <input
-                    type="radio"
-                    value="guardian"
-                    id="radio_6"
-                    name="relationship"
-                  />
-                  <label for="radio_6" class="radio"
-                    ><span>Guardian</span></label
-                  >
+                  <input type="radio" value="guardian" id="radio_6" name="relationship"/>
+                  <label for="radio_6" class="radio"><span>Guardian</span></label>
                 </div>
                 <div>
-                  <input
-                    type="radio"
-                    value="other"
-                    id="radio_7"
-                    name="relationship"
-                  />
+                  <input type="radio" value="other" id="radio_7" name="relationship"/>
                   <label for="radio_7" class="radio"><span>Other</span></label>
                   <input type="text" />
                 </div>
@@ -144,14 +122,15 @@
             </div>
           </div>
         </fieldset>
+
         <div class="btn-block">
           <button type="submit" id="submitButton">Submit</button>
         </div>
       </form>
 
       <section id="summary"></section>
-
-      <script src="register.js" defer></script>
     </div>
+
+    <script type="module" src="register.js" defer></script>
   </body>
 </html>
