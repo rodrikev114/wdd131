@@ -1,93 +1,87 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Estimates & Services | Ultra Concrete LLC</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <script defer src="main.js"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <header>
-    <div class="container topbar">
-      <a class="brand" href="index.html">
-        <img src="logo-placeholder.png" alt="Ultra Concrete LLC logo" />
-        <span>Ultra Concrete LLC</span>
-      </a>
+<a class="skip-link" href="#main">Skip to main content</a>
 
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="estimates.html" aria-current="page">Estimates & Services</a></li>
-        </ul>
-      </nav>
+<header>
+  <div class="container topbar">
+    <a class="brand" href="index.html">
+      <img src="logo-placeholder.png" alt="Ultra Concrete LLC logo">
+      <span>Ultra Concrete LLC</span>
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="estimates.html" aria-current="page">Estimates &amp; Services</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="container">
+  <h1>Estimates &amp; Services</h1>
+
+  <div class="grid form-grid">
+    <div class="card">
+      <h2>Estimate Calculator</h2>
+
+      <form id="estimate-form">
+        <label for="jobType">Job type</label>
+        <select id="jobType"></select>
+
+        <label for="lengthFt">Length (ft)</label>
+        <input id="lengthFt" type="number" required>
+
+        <label for="widthFt">Width (ft)</label>
+        <input id="widthFt" type="number" required>
+
+        <label for="thicknessIn">Thickness (in)</label>
+        <input id="thicknessIn" type="number" value="4" required>
+
+        <button type="submit">Calculate</button>
+      </form>
+
+      <div id="estimateOutput" class="notice">
+        Enter values and calculate.
+      </div>
     </div>
-  </header>
 
-  <main id="main" class="container">
-    <h1>Estimates & Services</h1>
+    <div class="card">
+      <h2>Weather Warning</h2>
 
-    <section class="form-grid">
-      <article class="card">
-        <h2>Estimate Calculator</h2>
+      <form id="weather-form">
+        <label for="tempF">Temperature (°F)</label>
+        <input id="tempF" type="number" required>
 
-        <form id="estimate-form">
-          <label for="jobType">Job type</label>
-          <select id="jobType"></select>
+        <label for="precip">Rain / Snow</label>
+        <select id="precip">
+          <option value="none">None</option>
+          <option value="possible">Possible</option>
+          <option value="likely">Likely</option>
+        </select>
 
-          <label for="lengthFt">Length (feet)</label>
-          <input id="lengthFt" type="number" required />
+        <button type="submit">Check</button>
+      </form>
 
-          <label for="widthFt">Width (feet)</label>
-          <input id="widthFt" type="number" required />
-
-          <label for="thicknessIn">Thickness (inches)</label>
-          <input id="thicknessIn" type="number" value="4" required />
-
-          <button type="submit">Calculate</button>
-        </form>
-
-        <div id="estimateOutput" class="notice">
-          Enter measurements and click Calculate.
-        </div>
-      </article>
-
-      <article class="card">
-        <h2>Weather Warning</h2>
-
-        <form id="weather-form">
-          <label for="tempF">Temperature (°F)</label>
-          <input id="tempF" type="number" required />
-
-          <label for="precip">Rain or snow</label>
-          <select id="precip">
-            <option value="none">None</option>
-            <option value="possible">Possible</option>
-            <option value="likely">Likely</option>
-          </select>
-
-          <label for="wind">High wind</label>
-          <select id="wind">
-            <option value="no">No</option>
-            <option value="yes">Yes</option>
-          </select>
-
-          <button type="submit">Check Conditions</button>
-        </form>
-
-        <div id="weatherOutput" class="notice">
-          Enter conditions and check weather.
-        </div>
-      </article>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p><strong>Ultra Concrete LLC</strong></p>
+      <div id="weatherOutput" class="notice">
+        Enter conditions and check.
+      </div>
     </div>
-  </footer>
+  </div>
+</main>
+
+<footer class="footer">
+  <p>© 2025 Ultra Concrete LLC</p>
+</footer>
+
 </body>
 </html>
